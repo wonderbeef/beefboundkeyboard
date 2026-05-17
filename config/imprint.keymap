@@ -95,8 +95,8 @@
 &trans      &trans             &trans           &mkp LCLK             &mkp RCLK             &trans                           &kp LS(LC(HOME))  &kp LEFT_ARROW          &kp DOWN_ARROW     &kp RIGHT          &kp LS(LC(END))  &trans
 &trans      &trans             &kp LC(X)        &kp LC(C)             &kp LC(V)             &trans                           &trans            &kp LC(LEFT_ARROW)      &kp LC(PAGE_DOWN)  &kp LC(RIGHT)      &trans           &trans
 &trans      &trans             &trans           &trans                &trans                                                                   &kp LC(LA(DELETE))      &trans             &trans             &kp LA(UP)       &kp LA(DOWN_ARROW)
-                                                                      &kp LA(F4)            &tog 5                 &trans    &trans            &trans                  &kp LA(TAB)
-                                                                      &kp LEFT_SHIFT        &kp CAPS               &trans    &trans            &kp DELETE              &kp SPACE
+                                                                      &kp LA(F4)            &tog 5                 &trans    &trans            &trans                  &kp ENTER
+                                                                      &kp LEFT_SHIFT        &kp CAPS               &trans    &kp LA(TAB)       &kp DELETE              &kp SPACE
             >;
         };
 
@@ -125,10 +125,10 @@
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,
         <&zip_xy_scaler 1 3>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
